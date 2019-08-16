@@ -2,7 +2,7 @@ import React from 'react';
 import './App.css';
 import products from './productsAll';
 import Header from './Components/Header';
-import Basket from './Components/Basket';
+import Cart from './Components/Cart';
 import Products from './Components/Products';
 import { connect } from 'react-redux';
 import { SET_PRODUCTS } from './store'
@@ -16,7 +16,7 @@ class App extends React.Component {
     return (
       <div className="App">
         <Header />
-        <Basket />
+        <Cart />
         <Products />
       </div>
     );

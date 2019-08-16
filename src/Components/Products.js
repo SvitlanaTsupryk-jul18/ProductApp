@@ -1,8 +1,8 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { ADD_TO_BASKET } from './../store'
+import { ADD_TO_CART } from './../store';
 
-const Products = ({ products = [], addToBasket }) => (
+const Products = ({ products = [], addToCart }) => (
     <div className="products">
         {
             products.map(product => (
@@ -10,7 +10,7 @@ const Products = ({ products = [], addToBasket }) => (
                     <h3>{product.title} </h3>
                     <p>{product.price}$</p>
                     <p>{product.description}</p>
-                    <button type="button" onClick={() => addToBasket(product)}>ADD</button>
+                    <button type="button" onClick={() => addToCart(product)}>ADD</button>
                 </div>
             ))
         }
@@ -25,7 +25,7 @@ const mapState = (state) => {
 
 
 const mapDispatch = (dispatch) => ({
-    addToBasket: (product) => dispatch({ type: ADD_TO_BASKET, product: product }),
+    addToCart: (product) => dispatch({ type: ADD_TO_CART, product: product }),
 });
 
 export default connect(mapState, mapDispatch)(Products);
