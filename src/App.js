@@ -1,12 +1,16 @@
 import React from 'react';
 import './App.css';
+import products from './productsAll';
+import Header from './Components/Header';
+import Basket from './Components/Basket';
+import Products from './Components/Products';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-       Products
-      </header>
+      <Header />
+      <Basket />
+      <Products />
     </div>
   );
 }
