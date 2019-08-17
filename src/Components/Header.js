@@ -4,17 +4,21 @@ import { getCartItemsCount, getCartTotalPrice } from '../redux/store';
 import { NavLink } from 'react-router-dom';
 
 const Header = ({ count, price }) => (
-    <header>
+    <header className="header">
         <h1>Products</h1>
-        <ul>
-            <li><NavLink exact to="/">Products</NavLink></li>
-            <li><NavLink to="/cart">Shopping Cart</NavLink></li>
+        <ul className="header__nav">
+            <li><NavLink exact to="/" className="header__link" activeClassName="header__link--active">Products</NavLink></li>
+            <li><NavLink to="/cart" className="header__link" activeClassName="header__link--active">Shopping Cart</NavLink></li>
         </ul>
-        <div>
-            <li><NavLink to="/cart"> <svg aria-hidden="true" focusable="false" className="header__svg" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512" height="30" width="30"><path fill="currentColor" d="M576 216v16c0 13.255-10.745 24-24 24h-8l-26.113 182.788C514.509 462.435 494.257 480 470.37 480H105.63c-23.887 0-44.139-17.565-47.518-41.212L32 256h-8c-13.255 0-24-10.745-24-24v-16c0-13.255 10.745-24 24-24h67.341l106.78-146.821c10.395-14.292 30.407-17.453 44.701-7.058 14.293 10.395 17.453 30.408 7.058 44.701L170.477 192h235.046L326.12 82.821c-10.395-14.292-7.234-34.306 7.059-44.701 14.291-10.395 34.306-7.235 44.701 7.058L484.659 192H552c13.255 0 24 10.745 24 24zM312 392V280c0-13.255-10.745-24-24-24s-24 10.745-24 24v112c0 13.255 10.745 24 24 24s24-10.745 24-24zm112 0V280c0-13.255-10.745-24-24-24s-24 10.745-24 24v112c0 13.255 10.745 24 24 24s24-10.745 24-24zm-224 0V280c0-13.255-10.745-24-24-24s-24 10.745-24 24v112c0 13.255 10.745 24 24 24s24-10.745 24-24z"></path></svg>Shopping Cart</NavLink></li>
-            <p>
-                Totall:  {count} products  Price :{price}$</p>
-        </div>
+        {count !== 0
+            ? (<div className="header__basket">
+                <li><NavLink to="/cart" className="header__link-cart"> <svg aria-hidden="true" focusable="false" className="header__svg" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512" height="30" width="30"><path fill="currentColor" d="M576 216v16c0 13.255-10.745 24-24 24h-8l-26.113 182.788C514.509 462.435 494.257 480 470.37 480H105.63c-23.887 0-44.139-17.565-47.518-41.212L32 256h-8c-13.255 0-24-10.745-24-24v-16c0-13.255 10.745-24 24-24h67.341l106.78-146.821c10.395-14.292 30.407-17.453 44.701-7.058 14.293 10.395 17.453 30.408 7.058 44.701L170.477 192h235.046L326.12 82.821c-10.395-14.292-7.234-34.306 7.059-44.701 14.291-10.395 34.306-7.235 44.701 7.058L484.659 192H552c13.255 0 24 10.745 24 24zM312 392V280c0-13.255-10.745-24-24-24s-24 10.745-24 24v112c0 13.255 10.745 24 24 24s24-10.745 24-24zm112 0V280c0-13.255-10.745-24-24-24s-24 10.745-24 24v112c0 13.255 10.745 24 24 24s24-10.745 24-24zm-224 0V280c0-13.255-10.745-24-24-24s-24 10.745-24 24v112c0 13.255 10.745 24 24 24s24-10.745 24-24z"></path></svg>
+                </NavLink></li>
+                <p>Total products:  <span className="blue">{count}</span>&nbsp;&nbsp;&nbsp;
+                    Total price : <span className="blue">{price}</span> $</p>
+            </div>
+            )
+            : ""}
     </header>
 );
 

@@ -6,11 +6,11 @@ const Products = ({ products = [], addToCart }) => (
     <div className="products">
         {
             products.map(product => (
-                <div key={product.id}>
+                <div key={product.id} className="product">
                     <h3>{product.title} </h3>
-                    <p>{product.price}$</p>
-                    <p>{product.description}</p>
-                    <button type="button" onClick={() => addToCart(product)}>ADD</button>
+                    <p className="product__text">{product.description}</p>
+                    <p className="product__price">{product.price} $</p>
+                    <button type="button" className="btn" onClick={() => addToCart(product)}>BUY</button>
                 </div>
             ))
         }
