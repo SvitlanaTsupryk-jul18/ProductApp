@@ -5,7 +5,8 @@ import Header from './Components/Header';
 import Cart from './Components/Cart';
 import Products from './Components/Products';
 import { connect } from 'react-redux';
-import { setProducts } from './redux/products'
+import { setProducts } from './redux/products';
+import { Switch, Route } from 'react-router-dom';
 
 class App extends React.Component {
   componentDidMount() {
@@ -16,8 +17,10 @@ class App extends React.Component {
     return (
       <div className="App">
         <Header />
-        <Cart />
-        <Products />
+        <Switch>
+          <Route exact path="/" component={Products} />
+          <Route path="/cart" component={Cart} />
+        </Switch>
       </div>
     );
   }
