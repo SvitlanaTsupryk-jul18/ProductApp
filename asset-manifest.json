@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/ProductApp/static/css/main.2cce8147.chunk.css",
-    "main.js": "/ProductApp/static/js/main.a480f732.chunk.js",
-    "main.js.map": "/ProductApp/static/js/main.a480f732.chunk.js.map",
+    "main.js": "/ProductApp/static/js/main.803bd66a.chunk.js",
+    "main.js.map": "/ProductApp/static/js/main.803bd66a.chunk.js.map",
     "runtime~main.js": "/ProductApp/static/js/runtime~main.0ab52380.js",
     "runtime~main.js.map": "/ProductApp/static/js/runtime~main.0ab52380.js.map",
     "static/js/2.95c9d5e8.chunk.js": "/ProductApp/static/js/2.95c9d5e8.chunk.js",
     "static/js/2.95c9d5e8.chunk.js.map": "/ProductApp/static/js/2.95c9d5e8.chunk.js.map",
     "index.html": "/ProductApp/index.html",
-    "precache-manifest.b2c71928c94e4803aa63b1566757cbff.js": "/ProductApp/precache-manifest.b2c71928c94e4803aa63b1566757cbff.js",
+    "precache-manifest.737113e9f6523b720627d9895ac58208.js": "/ProductApp/precache-manifest.737113e9f6523b720627d9895ac58208.js",
     "service-worker.js": "/ProductApp/service-worker.js",
     "static/css/main.2cce8147.chunk.css.map": "/ProductApp/static/css/main.2cce8147.chunk.css.map"
   }
