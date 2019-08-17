@@ -5,7 +5,7 @@ import Header from './Components/Header';
 import Cart from './Components/Cart';
 import Products from './Components/Products';
 import { connect } from 'react-redux';
-import { SET_PRODUCTS } from './store'
+import { SET_PRODUCTS } from './redux/products'
 
 class App extends React.Component {
   componentDidMount() {

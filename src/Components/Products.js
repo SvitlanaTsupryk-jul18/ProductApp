@@ -1,6 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { ADD_TO_CART } from './../store';
+import { ADD_TO_CART } from './../redux/cart';
 
 const Products = ({ products = [], addToCart }) => (
     <div className="products">

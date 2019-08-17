@@ -1,7 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { ADD_TO_CART } from '../store';
-import { REMOVE_FROM_CART } from '../store';
+import { ADD_TO_CART } from '../redux/cart';
+import { REMOVE_FROM_CART } from '../redux/cart';
 
 const Cart = ({ cartItems = [], addToCart, removeFromCart }) => (
     <div>
