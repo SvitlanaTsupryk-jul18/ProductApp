@@ -57,3 +57,17 @@ const reducer = (state = [], action) => {
 };
 
 export default reducer;
+
+export const getCartItems = (state) => {
+    return state.reduce(
+        (sum, item) => sum + item.count,
+        0
+    );
+};
+
+export const getTotalPrice = (state) => {
+    return state.reduce(
+        (sum, item) => sum + +item.product.price * item.count,
+        0
+    )
+};

@@ -29,6 +29,4 @@ const mapState = (state) => {
 
 const mapDispatch = { addToCart, removeFromCart };
 
-
-
 export default connect(mapState, mapDispatch)(Cart);

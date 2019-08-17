@@ -1,5 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
+import { getCartItemsCount, getCartTotalPrice } from '../redux/store';
 
 const Header = ({ count, price }) => (
     <header>
@@ -12,23 +13,9 @@ const Header = ({ count, price }) => (
     </header>
 );
 
-const getCartItems = (state) => {
-    return state.cartItems.reduce(
-        (sum, item) => sum + item.count,
-        0
-    )
-};
-
-const getTotalPrice = (state) => {
-    return state.cartItems.reduce(
-        (sum, item) => sum + +item.product.price * item.count,
-        0
-    ),
-};
-
 const mapState = (state) => ({
-    count: getCartItems(state),
-    price: getTotalPrice(state);
+    count: getCartItemsCount(state),
+    price: getCartTotalPrice(state)
 });
 
 export default connect(mapState)(Header);
