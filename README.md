@@ -1,6 +1,6 @@
-To see click 
+To see this task click on link further 
 
-# [ProductApp]("http://SvitlanaTsupryk-jul18.github.io/ProductApp)
+# [ProductApp](http://SvitlanaTsupryk-jul18.github.io/ProductApp)
 
 In the project directory, you can run:
 
