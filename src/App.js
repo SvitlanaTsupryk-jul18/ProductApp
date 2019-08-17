@@ -5,7 +5,7 @@ import Header from './Components/Header';
 import Cart from './Components/Cart';
 import Products from './Components/Products';
 import { connect } from 'react-redux';
-import { SET_PRODUCTS } from './redux/products'
+import { setProducts } from './redux/products'
 
 class App extends React.Component {
   componentDidMount() {
@@ -25,7 +25,7 @@ class App extends React.Component {
 
 
 const mapDispatch = (dispatch) => ({
-  setProducts: (products) => dispatch({ type: SET_PRODUCTS, products: products }),
+  setProducts: (products) => dispatch(setProducts(products)),
 });
 
 export default connect(null, mapDispatch)(App);

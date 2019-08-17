@@ -1,7 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { ADD_TO_CART } from '../redux/cart';
-import { REMOVE_FROM_CART } from '../redux/cart';
+import { addToCart, removeFromCart } from './../redux/cart';
 
 const Cart = ({ cartItems = [], addToCart, removeFromCart }) => (
     <div>
@@ -28,10 +27,7 @@ const mapState = (state) => {
     };
 };
 
-const mapDispatch = (dispatch) => ({
-    addToCart: (product) => dispatch({ type: ADD_TO_CART, product: product }),
-    removeFromCart: (product) => dispatch({ type: REMOVE_FROM_CART, product: product }),
-});
+const mapDispatch = { addToCart, removeFromCart };
 
 
 

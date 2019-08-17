@@ -1,4 +1,11 @@
-export const SET_PRODUCTS = "SET_PRODUCTS";
+const SET_PRODUCTS = "SET_PRODUCTS";
+
+export const setProducts = (products) => {
+    return {
+        type: SET_PRODUCTS,
+        products: products,
+    };
+};
 
 const reducer = (state = [], action) => {
     switch (action.type) {
