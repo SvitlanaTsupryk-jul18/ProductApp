@@ -22,7 +22,6 @@ const Cart = ({ cartItems = [], addToCart, removeFromCart }) => (
             ? (<button type="button" className="btn btn--buy" onClick={() => alert("Congrats!")}>buy now</button>)
             : (<p>There is nothing here yet</p>)}
     </div>
-    // <span>{user.name}</span>
 );
 
 const mapState = (state) => {

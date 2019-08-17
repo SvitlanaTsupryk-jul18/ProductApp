@@ -12,7 +12,6 @@ const store = createStore(reducer, composeWithDevTools());
 
 export default store;
 
-
 export const getCartItemsCount = (state) => {
     return getCartItems(state.cartItems);
 };
@@ -21,6 +20,3 @@ export const getCartTotalPrice = (state) => {
     return getTotalPrice(state.cartItems);
 };
 
-store.subscribe(() => {
-    console.log("store -", store.getState());
-})
